@@ -1,0 +1,234 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(3, 140, 140);
+}
+
+/*style title*/
+
+h1 {
+  font-size: 60px;
+  color: rgb(242, 242, 242);
+  font-weight: 900;
+  text-align: center;
+  margin: 10px;
+  
+  text-shadow: 5px 5px 5px rgb(17, 29, 64);
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 5px;
+}
+
+footer div {
+  height: 35%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer a {
+  position: relative;
+  color: white;
+}
+
+footer a:hover,
+footer a:active {
+  color: rgba(19, 242, 242, 0.603);
+}
+
+footer ion-icon {
+  font-size: 25px;
+}
+
+footer p {
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  margin: 2px;
+  color: white;
+}
+
+/*box news*/
+#main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75%;
+  width: 99%;
+}
+
+#box-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  height: 90%;
+  width: 75%;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: auto;
+}
+
+#box-news::-webkit-scrollbar {
+width: 12px;
+}
+#box-news::-webkit-scrollbar-track {
+  background-color: rgb(17, 29, 64);
+  border-radius: 10px;
+}
+#box-news::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+/*one div news*/
+.one-news {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(11, 23, 38); 
+  text-decoration: none;
+  color: white;
+  height: 16%;
+  width: 48%;
+  margin: 5px;
+  border: solid 3px rgb(17, 29, 64);
+  box-shadow: 5px 5px 5px rgb(17, 29, 64);
+  border-radius: 35px 10px;
+}
+
+.one-news:hover {
+  transform: translateY(-5px);
+  background-color: rgba(147, 48, 172, 0.925);
+}
+
+/*title*/
+.title-box {
+  height: 50%;
+  text-align: center;
+  padding: 5px;
+}
+.titleN {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  margin: 5px;
+  padding: 5px;
+}
+
+/*time e link*/
+.time-link-box {
+  background-color: rgb(242, 242, 242);
+  color: black;
+  position: relative;
+  display: flex;
+  height: 50%;
+  border-radius: 20px 10px 150px 30px;
+}
+
+.time-element,
+.link {
+  position: relative;
+  height: 80%;
+  margin: 0;
+  top: 15%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.time-element {
+  width: 40%;
+}
+
+.link {
+  width: 60%;
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
+
+
+/*button*/
+.btn-load {
+  position: relative;
+  width: 25%;
+  height: 9%;
+  top: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 900;
+  
+  background-color: rgb(11, 23, 38);
+  border: solid 3px  white;
+  box-shadow: 3px 3px 10px white;
+  cursor: pointer; 
+}
+
+.btn-load:hover {
+  border: solid 3px rgba(197, 47, 235, 0.925);
+  color: rgba(197, 47, 235, 0.925);
+  box-shadow: 3px 3px 10px rgba(197, 47, 235, 0.925);
+}
+
+.btn-load:active {
+  background-color: rgba(11, 23, 38, 0.747);
+  transform: scale(1) translateY(2px);
+}
+
+/*adatto a mobile*/
+@media screen and (min-width:1200px){
+  #box-news {
+    width: 72%;
+  }
+}
+
+@media screen and (min-width:799px) and (max-width:980px){
+  #box-news {
+    width: 95%;
+  }
+  .link,
+  .time-element {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  #main {
+    width: 97%;
+  }
+  #box-news {
+    width: 80%;
+    height: 88%;
+    flex-direction: row;
+  }
+  .one-news {
+    width: 90%;
+  }
+
+  .titleN {
+    font-size: 14px;
+  }
+
+  .link,
+  .time-element {
+    font-size: 13px;
+  }
+
+  .btn-load {
+    top: 8px;
+  }
+}
