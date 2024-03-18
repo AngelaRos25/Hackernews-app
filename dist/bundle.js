@@ -858,6 +858,7 @@ async function takeId(newsA){
           json.time
         )
       })
+      .catch(error => console.error('Error fetching news:', error))
     });
     
 }
