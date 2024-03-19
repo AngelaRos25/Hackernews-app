@@ -17764,6 +17764,26 @@ width: 12px;
   .btn-load {
     top: 8px;
   }
+}
+
+@media screen and (max-width:390px) {
+  h1{
+    font-size: 47px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #main {
+    top: 15%;
+  }
+
+  #box-news {
+    width: 90%;
+  }
+
+  .btn-load {
+    width: 35%;
+  }
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -21335,6 +21355,7 @@ __webpack_require__.r(__webpack_exports__);
 //general import
 
 //import css style
+
 const axios = __webpack_require__(12);
 var _ = __webpack_require__(1);
 //importo i div dal file element.js
@@ -21347,23 +21368,7 @@ let count = 10;
 let baseNum = 0;
 
 //contattare le API che restituirà 500 id
-async function loadApi() {
-  try {
-    const response = await axios.get(`${API_URL}/newstories.json`)
 
-    .then((response) => console.log(response.data))
-    
-    .then((data) =>{
-      takeId();
-      return data;
-    })
-  } catch(error) {
-    console.log(error);
-  }
-}
-
-console.log(loadApi());
-/*
 async function loadApi(){
     let response = await fetch(`${API_URL}/newstories.json`)
 
@@ -21378,31 +21383,16 @@ async function loadApi(){
   })
   .catch(error => console.error('Error fetching news:', error))
 }
-*/
-
-async function takeId(item) {
-
-  for (let i = baseNum; i < baseNum + count; i++) {
-    let item = await axios.get(`${API_URL}/item/${item}.json`)
-    .then((response) => console.log(response.data));
-
-    let urlAct = _.get(item, "data.url");
-    let titleAct = _.get(item, "data.title");
-    let timeAct = _.get(item, "data.time");
-    
-    (0,_element__WEBPACK_IMPORTED_MODULE_2__.theOneDiv)(urlAct, titleAct, timeAct)
-  }
-}
 
 //mostrare i dettagli di queste id => titolo, link e data
-/*
+
 function takeId(newsA){
     newsA.forEach((item) => {
       let response =  fetch (`${API_URL}/item/${item}.json`)
 
       .then((response) => response.json())
       .then((json) =>{
-        theOneDiv(
+        (0,_element__WEBPACK_IMPORTED_MODULE_2__.theOneDiv)(
           json.url,
           json.title,
           json.time
@@ -21412,7 +21402,7 @@ function takeId(newsA){
       .catch(error => console.error('Error fetching news:', error))
     });
     
-}*/
+}
 
 //aggiungere pulsante load more
 getBtn.addEventListener("click", () => {

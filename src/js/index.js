@@ -1,6 +1,9 @@
 //general import
+
 import '../css/style.css';//import css style
 
+const axios = require('axios');
+var _ = require('lodash');
 //importo i div dal file element.js
 import {theOneDiv} from "./element"
 
@@ -11,6 +14,7 @@ let count = 10;
 let baseNum = 0;
 
 //contattare le API che restituirà 500 id
+
 async function loadApi(){
     let response = await fetch(`${API_URL}/newstories.json`)
 
@@ -26,22 +30,6 @@ async function loadApi(){
   .catch(error => console.error('Error fetching news:', error))
 }
 loadApi();
-/*
-async function takeId(item) {
-
-  for (let i = baseNum; i < baseNum + count; i++) {
-    let newsA = await fetch(`${API_URL}/item/${item}.json`)
-    .then((response) => console.log(response))
-
-    let urlAct = _.get(newsA, "data.url");
-    let titleAct = _.get(newsA, "data.title");
-    let timeAct = _.get(newsA, "data.time");
-    
-    theOneDiv(urlAct, titleAct, timeAct)
-  }
-}
-
-takeId();*/
 //mostrare i dettagli di queste id => titolo, link e data
 
 function takeId(newsA){
@@ -61,6 +49,7 @@ function takeId(newsA){
     });
     
 }
+
 //aggiungere pulsante load more
 getBtn.addEventListener("click", () => {
 baseNum = count;
