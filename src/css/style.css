@@ -46,6 +46,8 @@ footer a:active {
 }
 
 footer ion-icon {
+  padding-left: 6px;
+  padding-right: 6px;
   font-size: 25px;
 }
 
@@ -207,6 +209,9 @@ width: 12px;
 }
 
 @media screen and (max-width:800px) {
+  h1 {
+    font-size: 55px;
+  }
   #main {
     width: 97%;
   }
@@ -220,7 +225,7 @@ width: 12px;
   }
 
   .titleN {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .link,
@@ -230,5 +235,26 @@ width: 12px;
 
   .btn-load {
     top: 8px;
+  }
+}
+
+@media screen and (max-width:390px) {
+  h1{
+    font-size: 47px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  #main {
+    top: 15%;
+  }
+
+  #box-news {
+    width: 90%;
+  }
+
+  .btn-load {
+    
+    width: 35%;
   }
 }

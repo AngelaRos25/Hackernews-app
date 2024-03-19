@@ -21,15 +21,32 @@ async function loadApi(){
   .then((data) => {
     const firstId = data.slice(baseNum, count);//prende 10 id
     takeId(firstId);
+    return data;
   })
+  .catch(error => console.error('Error fetching news:', error))
+}
+loadApi();
+/*
+async function takeId(item) {
+
+  for (let i = baseNum; i < baseNum + count; i++) {
+    let newsA = await fetch(`${API_URL}/item/${item}.json`)
+    .then((response) => console.log(response))
+
+    let urlAct = _.get(newsA, "data.url");
+    let titleAct = _.get(newsA, "data.title");
+    let timeAct = _.get(newsA, "data.time");
+    
+    theOneDiv(urlAct, titleAct, timeAct)
+  }
 }
 
-loadApi();
-
+takeId();*/
 //mostrare i dettagli di queste id => titolo, link e data
-async function takeId(newsA){
+
+function takeId(newsA){
     newsA.forEach((item) => {
-      let response = fetch (`${API_URL}/item/${item}.json`)
+      let response =  fetch (`${API_URL}/item/${item}.json`)
 
       .then((response) => response.json())
       .then((json) =>{
@@ -38,15 +55,15 @@ async function takeId(newsA){
           json.title,
           json.time
         )
+        return json;
       })
       .catch(error => console.error('Error fetching news:', error))
     });
     
 }
-
 //aggiungere pulsante load more
 getBtn.addEventListener("click", () => {
 baseNum = count;
-count += 10;
-loadApi();
+count += 0;
+takeId()
 })
