@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -17,9 +18,17 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'My Hacker News app',
-      template: './src/html/index.html'
-    })
+      title: 'HackerNews',
+      template: './src/html/index.html',
+    }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, 'src/img/favicon.png'),
+      prefix: '',
+      publicPath: '../favicons',
+      outputPath: path.resolve(__dirname, 'dist/favicons'),
+      inject: (htmlPlugin) => 
+        path.basename(htmlPlugin.options.filename) === 'index.html',
+    }),
   ],
   devServer: {
     port: 5000,
