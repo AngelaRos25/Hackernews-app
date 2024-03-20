@@ -243,3 +243,12 @@ width: 12px;
     font-size: 46px;
   }
 }
+
+@media screen and (max-width: 330px) {
+  h1 {
+    font-size: 42px;
+  }
+  .btn-load {
+    width: 20%;
+  }
+}
