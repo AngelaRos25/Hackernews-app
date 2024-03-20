@@ -22,7 +22,7 @@ module.exports = {
       template: './src/html/index.html',
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, 'dist/favicons/favicon.png'),
+      logo: path.resolve(__dirname, 'src/img/favicon.png'),
       prefix: '',
       publicPath: '../favicons',
       outputPath: path.resolve(__dirname, 'dist/favicons'),
