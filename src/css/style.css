@@ -238,23 +238,3 @@ width: 12px;
   }
 }
 
-@media screen and (max-width:500px) {
-  h1{
-    font-size: 46px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-  #main {
-    top: 15%;
-  }
-
-  #box-news {
-    width: 90%;
-  }
-
-  .btn-load {
-    width: 35%;
-  }
-}
-
