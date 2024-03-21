@@ -13,12 +13,14 @@ module.exports = {
     rules: [
       {test: /\.css$/i,
       use: ['style-loader', 'css-loader']},
+      { test: /\.png$/, type: "asset/resource" },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'HackerNews',
       template: './src/html/index.html',
+      favicon: './src/img/favicon.png'
     }),
   ],
   devServer: {
