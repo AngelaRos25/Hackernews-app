@@ -51,6 +51,6 @@ function takeId(newsA){
 //aggiungere pulsante load more
 getBtn.addEventListener("click", () => {
 baseNum = count;
-count += 0;
-takeId()
+count += 10;
+loadApi();
 })
