@@ -2,8 +2,6 @@
 
 import '../css/style.css';//import css style
 
-const axios = require('axios');
-var _ = require('lodash');
 //importo i div dal file element.js
 import {theOneDiv} from "./element"
 
