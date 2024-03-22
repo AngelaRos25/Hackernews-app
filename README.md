@@ -5,8 +5,8 @@
 This project is realized for [start2Impact](https://www.start2impact.it/)'s module "Javascript Advanced" in Front-End developer course.
 
 ## The Assignment:
-The assignment of thi project was to create an application to diffuse the news in tech environment.
-
+The assignment of this project was to create an application to diffuse the news in tech environment.
+I create the div news and with javascript, I fetch the API [Hacker News](https://github.com/HackerNews/API) and I show the content of this in 10 divs. you will find a "Load More" button and if you click this appear another 10 div news. 
 
 
 ### Built With:
