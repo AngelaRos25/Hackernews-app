@@ -124,7 +124,7 @@ width: 12px;
 }
 .titleN {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   position: relative;
   top: 0;
@@ -150,15 +150,16 @@ width: 12px;
   top: 15%;
   text-align: center;
   font-weight: bold;
+  font-size: 13px;
 }
 
 .time-element {
   width: 40%;
+  
 }
 
 .link {
   width: 60%;
-  font-size: 15px;
   color: black;
   text-decoration: none;
 }
@@ -210,12 +211,12 @@ width: 12px;
 
 @media screen and (max-width:800px) {
   h1 {
-    font-size: 55px;
+    font-size: 46px;
   }
   #main {
     width: 97%;
     justify-content: center;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-bottom: 3%;
   }
   #box-news {

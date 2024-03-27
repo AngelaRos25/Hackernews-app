@@ -9,7 +9,7 @@ function createNewsEl(tagName, classList){
 };
 
 //creare 1 div News
-export function theOneDiv(newsLink, newsTitle, newsTime) {
+export function theOneDiv(newsTitle, newsLink, newsTime) {
   const divOneNews = createNewsEl("a", "one-news");
   divOneNews.href = newsLink;
   divOneNews.target = "blank";
@@ -37,6 +37,7 @@ export function theOneDiv(newsLink, newsTitle, newsTime) {
   
   //creo il link
   const link = document.createElement ("a");
+
   if(newsLink) {
     link.innerText = cutUrl(newsLink);
     link.classList.add ("link");
@@ -63,17 +64,6 @@ function editDate(timeForm) {
 }
 
 //funzione accorcia url news
-function cutUrl(linkA){
-  let editLink = linkA;
-
-  if(editLink.includes("http://")) {
-    editLink = editLink.slice(5);
-  } else if(editLink.includes("https://")) {
-    editLink = editLink.slice(8);
-  }
-
-  let slashLink = editLink.indexOf("/");
-  editLink = editLink.slice(0, slashLink);
-
-  return editLink;
-  }
+function cutUrl(newsLink){
+    return newsLink.length > 25 ? newsLink.slice(0, 25) + "..." : newsLink
+}
