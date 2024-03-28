@@ -65,5 +65,5 @@ function editDate(timeForm) {
 
 //funzione accorcia url news
 function cutUrl(newsLink){
-    return newsLink.length > 25 ? newsLink.slice(0, 25) + "..." : newsLink
+    return newsLink.length > 20 ? newsLink.slice(0, 20) + "..." : newsLink
 }
