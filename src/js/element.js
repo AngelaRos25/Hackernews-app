@@ -64,6 +64,8 @@ function editDate(timeForm) {
 }
 
 //funzione accorcia url news
+const screenWidth = window.screen.width;
+
 function cutUrl(newsLink){
-    return newsLink.length > 20 ? newsLink.slice(0, 20) + "..." : newsLink
+    return newsLink.length > 19 ? newsLink.slice(0, 19) + "..." : newsLink
 }
