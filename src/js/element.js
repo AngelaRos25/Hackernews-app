@@ -64,8 +64,30 @@ function editDate(timeForm) {
 }
 
 //funzione accorcia url news
-const screenWidth = window.screen.width;
 
 function cutUrl(newsLink){
-    return newsLink.length > 19 ? newsLink.slice(0, 19) + "..." : newsLink
-}
+  if(newsLink.includes("http://")){
+    return newsLink.length > 22 ? newsLink.slice(7, 22) + "..." : newsLink
+  } else if(newsLink.includes("https://")) {
+    return newsLink.length > 20 ? newsLink.slice(7, 20) + "..." : newsLink
+  }
+
+  let slashLink = newsLink.indexOf("/");
+  newsLink = newsLink.slice(7, slashLink);
+  return newsLink;
+  }
+
+/*
+function cutUrl(newsLink){
+
+  if(newsLink.includes("http://")) {
+  newsLink.slice(2);
+  } else if(newsLink.includes("https://")) {
+    newsLink.slice(5);
+  }
+
+  let slashLink = newsLink.indexOf("/");
+  newsLink.slice(0, slashLink);
+
+  return newsLink;
+  }*/

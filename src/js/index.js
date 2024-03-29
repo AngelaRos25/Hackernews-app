@@ -38,6 +38,7 @@ async function takeId(){
   }
 }
 
+
 //aggiungere pulsante load more
 getBtn.addEventListener("click", () => {
 baseNum = count;
