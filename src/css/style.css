@@ -77,7 +77,7 @@ footer p {
   align-items: center;
   flex-direction: row;
   position: relative;
-  height: 90%;
+  height: 88%;
   width: 75%;
   padding-left: 10px;
   padding-right: 10px;
@@ -122,6 +122,7 @@ width: 12px;
   text-align: center;
   padding: 5px;
 }
+
 .titleN {
   color: white;
   font-size: 14px;
@@ -221,14 +222,21 @@ width: 12px;
   }
   #box-news {
     width: 80%;
-    height: 88%;
+    height: 100%;
     flex-direction: row;
   }
   .one-news {
     width: 90%;
   }
 
-  .titleN,
+  .title-box {
+    height: 60%;
+  }
+
+  .titleN {
+    font-size: 14px;
+  }
+
   .link,
   .time-element {
     font-size: 13px;
@@ -243,6 +251,9 @@ width: 12px;
   h1{
     font-size: 41px;
   }
+
+  
+  
   #box-news{
     width: 88%;
   }
