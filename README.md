@@ -5,8 +5,8 @@
 This project is realized for [start2Impact](https://www.start2impact.it/)'s module "Javascript Advanced" in Front-End developer course.
 
 ## The Assignment:
-The assignment of this project was to create an application to diffuse the news in tech environment.
-I create the div news and with javascript, I fetch the API [Hacker News](https://github.com/HackerNews/API) and I show the content of this in 10 divs. you will find a "Load More" button and if you click this appear another 10 div news. 
+The assignment of this project is to create an application to share news in a tech environment.
+I created a dummy div, then called the API [Hacker News](https://github.com/HackerNews/API) and I showed the result of the API call inside the dummy div that, consequently, creates 10 additional divs. A "Load More" button can be found at the bottom of the page and, if clicked, it creates other 10 divs with the news inside. 
 
 
 ### Built With:
