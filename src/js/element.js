@@ -76,18 +76,3 @@ function cutUrl(newsLink){
   newsLink = newsLink.slice(7, slashLink);
   return newsLink;
   }
-
-/*
-function cutUrl(newsLink){
-
-  if(newsLink.includes("http://")) {
-  newsLink.slice(2);
-  } else if(newsLink.includes("https://")) {
-    newsLink.slice(5);
-  }
-
-  let slashLink = newsLink.indexOf("/");
-  newsLink.slice(0, slashLink);
-
-  return newsLink;
-  }*/
