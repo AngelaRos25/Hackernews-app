@@ -1,5 +1,4 @@
 //general import
-
 import '../css/style.css'; //import css style
 
 // aggiungo axios e lodash

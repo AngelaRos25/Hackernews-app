@@ -63,7 +63,6 @@ function editDate(timeForm) {
 }
 
 //funzione accorcia url news
-
 function cutUrl(newsLink) {
     if (newsLink.includes("http://")) {
         return newsLink.length > 22 ? newsLink.slice(7, 22) + "..." : newsLink
