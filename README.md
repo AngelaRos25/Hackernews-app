@@ -16,7 +16,7 @@ I created a dummy div, then called the API [Hacker News](https://github.com/Hack
 - webpack
 
 ### Contact
-🔗 Poject Link : [Hackernews app](https://giangy25.github.io/Hackernews-app/)
+🔗 Poject Link : [Hackernews app](https://angelaros25.github.io/Hackernews-app/)
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
